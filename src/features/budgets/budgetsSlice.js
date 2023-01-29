@@ -1,3 +1,5 @@
+import { createSlice } from "@reduxjs/toolkit";
+
 export const CATEGORIES = [
   "housing",
   "food",
@@ -13,6 +15,12 @@ const initialState = CATEGORIES.map((category) => ({
   category: category,
   amount: 0,
 }));
+
+const budgetsSlice = createSlice({
+  name: "budgets",
+  initialState: initialState,
+  reducers: {},
+});
 
 export const editBudget = (budget) => {
   return {
